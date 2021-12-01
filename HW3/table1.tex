@@ -1,0 +1,90 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+Degrees & Variables & Mean & Standard deviation\tabularnewline
+\midrule
+\endhead
+0 & A\textsubscript{0} & 75.4926 & 0.1776\tabularnewline
+& RMSE & 5.0829 & 0.1487\tabularnewline
+1 & A\textsubscript{0} & 80.2905 & 0.1713\tabularnewline
+& A\textsubscript{1} & -0.0821 & 0.0023\tabularnewline
+& RMSE & 2.6883 & 0.0826\tabularnewline
+2 & A\textsubscript{0} & 78.7126 & 0.1561\tabularnewline
+& A\textsubscript{1} & 0.0585 & 0.0048\tabularnewline
+& A\textsubscript{2} & -7.8134e-04 & 3.0373e-05\tabularnewline
+& RMSE & 1.8864 & 0.0550\tabularnewline
+3 & A\textsubscript{0} & 80.5932 & 0.1581\tabularnewline
+& A\textsubscript{1} & -0.0704 & 0.0098\tabularnewline
+& A\textsubscript{2} & 0.0010 & 1.5393e-04\tabularnewline
+& A\textsubscript{3} & -6.6583e-06 & 6.3588e-07\tabularnewline
+& RMSE & 1.7260 & 0.0574\tabularnewline
+4 & A\textsubscript{0} & 80.4129 & 0.1670\tabularnewline
+& A\textsubscript{1} & -0.0486 & 0.0177\tabularnewline
+& A\textsubscript{2} & 4.6153e-04 & 4.8591e-04\tabularnewline
+& A\textsubscript{3} & -1.8307e-06 & 4.6050e-06\tabularnewline
+& A\textsubscript{4} & -1.3398e-08 & 1.3892e-08\tabularnewline
+& RMSE & 1.7231 & 0.0595\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{document}
